@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import '../card/card.css';
 import CardContent from '@mui/material/CardContent';
 
-const CardComponent = ({ words }) => {
+const CardComponent = ({ words, getCharClass }) => {
   return (
     <div className='card'>
     <Card style={{backgroundColor: "white"}} sx={{ minWidth: 330 }}>
@@ -15,7 +15,7 @@ const CardComponent = ({ words }) => {
              <span>
                {
                  word.split("").map((char, idx) => (
-                   <span key={idx}>{char}</span>
+                   <span className={getCharClass(i, idx, char)} key={idx}>{char}</span>
                  ))
                }
              </span>

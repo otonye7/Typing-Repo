@@ -2,7 +2,7 @@ import * as React from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import '../text-area/text-area.css';
 
-const TextArea = ({ startTimer, handleKeyDown, currentInput, handleChange, status }) => {
+const TextArea = ({ startTimer, handleKeyDown, textInput, currentInput, handleChange, status }) => {
   return (
     <div className='text-area'>
     <TextareaAutosize
@@ -13,6 +13,7 @@ const TextArea = ({ startTimer, handleKeyDown, currentInput, handleChange, statu
       onKeyDown={handleKeyDown}
       value={currentInput}
       onChange={handleChange}
+      ref={textInput}
       disabled={status !== "started" || status === "finished"}
     />
     <br />
