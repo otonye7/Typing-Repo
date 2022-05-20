@@ -10,11 +10,17 @@ const CardComponent = ({ words }) => {
       <CardContent>
          {
            words.map((word, i) => (
-             <>
+            <>
+             <span key={i}>
              <span>
-                 {word} 
+               {
+                 word.split("").map((char, idx) => (
+                   <span key={idx}>{char}</span>
+                 ))
+               }
              </span>
              <span> </span>
+             </span>
              </>
          ))
        }

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
-import Button from '../button/button.component';
 import '../text-area/text-area.css';
 
-const TextArea = () => {
+const TextArea = ({ startTimer, handleKeyDown, currentInput, handleChange, status }) => {
   return (
     <div className='text-area'>
     <TextareaAutosize
@@ -11,9 +10,14 @@ const TextArea = () => {
       aria-label="maximum height"
       placeholder="You can type here"
       style={{ height: 200 }}
+      onKeyDown={handleKeyDown}
+      value={currentInput}
+      onChange={handleChange}
+      disabled={status !== "started" || status === "finished"}
     />
+    <br />
     <div className='button-container'>
-      <Button>START...</Button>
+      <button className='button-container' onClick={startTimer}>START...</button>
     </div>
     </div>
   );

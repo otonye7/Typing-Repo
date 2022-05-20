@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.time-text {
+    text-align: center;
+    color: red;
+}
+
+.score-text {
+    color: red;
+    text-align: center;
+    padding-right: 20px;
+}
