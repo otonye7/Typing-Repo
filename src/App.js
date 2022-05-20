@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import { useState, useEffect } from 'react';
+import CardComponent from './components/card/card.component';
+import TextArea from './components/text-area/text-area.component';
+import randomWords from 'random-words';
+
+
+const NUMBER_OF_WORDS = 200;
+// const SECONDS = 60;
 
 function App() {
+  const [words, setWords] = useState([]);
+
+  console.log(words)
+
+  useEffect(() => {
+    setWords(generateWords())
+  }, [])
+
+  function generateWords(){
+    return new Array(NUMBER_OF_WORDS).fill(null).map(() => randomWords())
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <CardComponent words={words} />
+       <br />
+       <TextArea />
     </div>
   );
 }
