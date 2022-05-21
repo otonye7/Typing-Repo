@@ -11,7 +11,7 @@ function App() {
        <Routes>
          <Route  path={'/'} exact={true}  element={<Home />} />
      </Routes>
-      <GamePage />
+      {/* <GamePage /> */}
     </div>
   );
 }
