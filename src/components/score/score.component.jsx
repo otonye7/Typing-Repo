@@ -1,6 +1,6 @@
 import '../score/score.css';
 
-const Score = ({ correctWord, inCorrectWord, status, score, numberOfWords, currentInput }) => {
+const Score = ({ correctWord, inCorrectWord, status, score }) => {
     let total = correctWord + inCorrectWord
     return(
         <div className="scorecontainer">
