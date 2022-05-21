@@ -11,8 +11,7 @@ const NUMBER_OF_WORDS = 100;
 const  GamePage = () => {
   const [words, setWords] = useState([]);
   const [minutes, setMinutes] = useState("");
-  const [seconds, setSeconds] = useState("59");
-  // const [countDown, setCountDown] = useState(SECONDS);
+  const [seconds, setSeconds] = useState("1");
   const [currentInput, setCurrentInput] = useState([]);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(-1);
@@ -40,10 +39,6 @@ const  GamePage = () => {
 
   const handleSelectChange = (e) => {
     setMinutes(e.target.value)
-  }
-   
-  const startTimer = () => {
-   
   }
 
   const handleStart = () => {
@@ -112,17 +107,17 @@ const  GamePage = () => {
     }
   }
 
-  const getCharClass = (wordIdx, charIdx, char) => {
-    if(wordIdx === currentWordIndex && charIdx === currentCharIndex && currentChar && status !== "finished"){
-      if(char === currentChar){
-        return ""
+  function getCharClass(wordIdx, charIdx, char) {
+    if (wordIdx === currentWordIndex && charIdx === currentCharIndex && currentChar && status !== 'finished') {
+      if (char === currentChar) {
+        return 'success'
       } else {
-        return "red"
+        return 'danger'
       }
-    } else if(wordIdx === currentWordIndex && currentCharIndex > words[currentWordIndex].length) {
-      return "red"
+    } else if (wordIdx === currentWordIndex && currentCharIndex >= words[currentWordIndex].length) {
+      return 'danger'
     } else {
-      return ""
+      return ''
     }
   }
 
@@ -143,7 +138,7 @@ const  GamePage = () => {
          getCharClass={getCharClass}
          />
        <br />
-       <TextArea startTimer={startTimer}
+       <TextArea 
         handleStart={handleStart}
         handleKeyDown={handleKeyDown}
         currentInput={currentInput}

@@ -1,4 +1,7 @@
-/* .App {
-    background-color: black;
-    height: 100%;
-} */
+.danger {
+    background-color: red;
+}
+
+.success {
+    background-color: green;
+}

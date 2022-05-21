@@ -4,7 +4,7 @@ import '../timer/timer.css';
 const Timer = ({ handleSelectChange, minutes, seconds }) => {
     return(
         <div className="container">
-            {minutes ?  <p className="time-text">TIMER: {minutes} : {seconds}</p> : <p className='time-text'> TIMER: 0 : 00</p>}
+           <p className="time-text">TIMER: {minutes} : {seconds}</p>
             <div className='select-container'>
                 <select className='select' onChange={handleSelectChange}>
                     <option className="options" value="">-select time-</option>
