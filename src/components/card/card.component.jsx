@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 const CardComponent = ({ words, getCharClass }) => {
   return (
     <div className='card'>
-    <Card style={{backgroundColor: "white"}} sx={{ minWidth: 330 }}>
+    <Card style={{backgroundColor: "#191919"}} sx={{ minWidth: 330 }}>
       <CardContent>
          {
            words.map((word, i) => (

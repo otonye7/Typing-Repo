@@ -1,0 +1,13 @@
+.scorecontainer {
+    width: 95%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.score {
+    color: red;
+    text-align: center;
+    padding-right: 20px;
+}

@@ -1,13 +1,21 @@
 import '../timer/timer.css';
 
-const Timer = ({ countDown, score, numberOfWords, correctWord, inCorrectWord, status }) => {
+
+const Timer = ({ handleSelectChange, minutes, seconds }) => {
     return(
         <div className="container">
-            <p className='score-text'>SCORE: {score} / {numberOfWords} </p>
-            { status === "finished" && (<p className='score-text'>ACCURACY: {Math.round((correctWord) / (correctWord + inCorrectWord)) * 100}%</p>)}
-            <p className="time-text">TIMER: {countDown}</p>
-        </div>
+            {minutes ?  <p className="time-text">TIMER: {minutes} : {seconds}</p> : <p className='time-text'> TIMER: 0 : 00</p>}
+            <div className='select-container'>
+                <select className='select' onChange={handleSelectChange}>
+                    <option className="options" value="">-select time-</option>
+                    <option className="options" value="1">1min</option>
+                    <option className="options" value="2">2mins</option>
+                    <option className="options" value="5">5mins</option>
+                </select>
+            </div>
+    </div>
     )
 }
 
 export default Timer;
+

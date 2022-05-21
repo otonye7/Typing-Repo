@@ -16,11 +16,10 @@ button {
     line-height: 28px; 
     /* padding: 0 18px 0 18px; */
     font-size: 15px;
-    background-color: black;
+    background-color: #1785DF;
     color: white;
     font-family: Times New Roman;
     line-height: 22.5px;
     outline: none;
-    border-radius: 15px;
     cursor: pointer;
 }
