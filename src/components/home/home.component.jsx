@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../home/home.css';
-import typingGame from '../../assets/typing-game.jpg';
+import typingGame from '../../assets/moon.jpg';
 import { useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 

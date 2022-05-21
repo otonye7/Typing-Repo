@@ -5,7 +5,7 @@ const Score = ({ correctWord, inCorrectWord, status, score, numberOfWords, curre
     return(
         <div className="scorecontainer">
             <p className='score'>SCORE: {score} / {total}</p>
-            {status === "finished" && (<p className='score'>{Math.round((score / (total)) * 100)}%</p>)}
+            {status === "finished" && (<p className='score'>ACCURACY: {Math.round((score / (total)) * 100)}%</p>)}
         </div>
     )
 }
