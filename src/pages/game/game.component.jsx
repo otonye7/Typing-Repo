@@ -4,9 +4,9 @@ import TextArea from '../../components/text-area/text-area.component';
 import Timer from '../../components/timer/timer.component';
 import Score from '../../components/score/score.component';
 import randomWords from 'random-words';
+import '../game/game.css';
 
-
-const NUMBER_OF_WORDS = 200;
+const NUMBER_OF_WORDS = 100;
 
 const  GamePage = () => {
   const [words, setWords] = useState([]);

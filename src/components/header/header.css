@@ -1,0 +1,14 @@
+.header-container {
+   padding-left: 20px;
+   cursor: pointer;
+}
+
+.header-text {
+    color: white;
+}
+
+@media screen and (max-width: 967px) { 
+  .header-container{
+      padding-left: 0px;
+  }
+}

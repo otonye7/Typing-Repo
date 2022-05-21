@@ -18,7 +18,7 @@ const TextArea = ({ handleKeyDown, textInput, currentInput, handleChange, status
     />
     <br />
     <div className='button-container'>
-      <button disabled={!minutes} className='button-container' onClick={handleStart}>CHALLENGE</button>
+      <button disabled={!minutes} className='button' onClick={handleStart}>CHALLENGE</button>
     </div>
     </div>
   );
